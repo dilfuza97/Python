@@ -11,4 +11,10 @@ node{
     stage("App Run"){
         sh "ssh ec2-user@${ENV} python /tmp/app.py"
     }
+    stage("Test app"){
+        sh "selenium"
+    }            
+
+    
+
 }           
